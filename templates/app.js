@@ -1,14 +1,14 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 //models go here
-const myModel = require("model") //update path
+const myModel = require("../models/model") //update path
 
 //middleware
 const app = express()
 app.use(bodyParser.json()) //urlencoded({extended: false})
 
 app.get("/", (req, res) => {
-    myModel.method((err, result) => {
+    myModel.get((err, result) => {
         if (err) {
             res.status(500).send()
         } else {
@@ -73,3 +73,5 @@ app.post("/:userID", (req, res) => {
 //         }
 //     })
 // })
+
+module.exports = app;
