@@ -1,7 +1,7 @@
 # my-backend-notes
 
 sql 
-```
+```js
 SELECT First_name FROM bed.my_table WHERE First_name = "Balls" ORDER BY First_name ASC||DESC;
 
 SELECT a.First_Name as "First Name", a.Last_Name as "Last Name", s.Pcode as "Postcode" FROM bed.shop s, my_table a WHERE s.Email = a.Email;
@@ -18,7 +18,7 @@ DELETE FROM my_table WHERE Email = '2';
 ```
 
 app
-```
+```js
 var id = req.params.userid
 data = req.body; //AND THATS WHY BODY PARSER IS SO IMPORTANT
     username = data["username"]
@@ -28,7 +28,7 @@ data = req.body; //AND THATS WHY BODY PARSER IS SO IMPORTANT
 ```
 
 myCommonAppBlocks
-```
+```js
 //detach ID from params
 postID = parseInt(req.params.postID.replace(":", "")) //parseInt returns NaN if not int
 if (isNaN(postID)) { //not in requirements
@@ -43,7 +43,7 @@ if (err) {
 ```
 
 myCommonAppHeaders
-```
+```js
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
@@ -52,7 +52,7 @@ const bodyParser = require("body-parser")
 app.use(bodyParser.json())
 ```
 whyAmITypingInCamelCasePleaseHelpProgrammingHasRuinedMyLifeHereIsMyModelTemplates
-```
+```js
 const db = require("./databaseConfig.js") //replace with your path
 
 
@@ -73,7 +73,7 @@ if (err) {//database connection issue
 ```
 
 nodemon:
-```
+```js
 //package.json
 "scripts": {
     "start-dev": "nodemon server.js",
