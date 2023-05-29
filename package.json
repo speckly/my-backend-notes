@@ -1,17 +1,20 @@
 {
-  "name": "friendbook",
+  "name": "mst",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start-dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "mysql": "^2.18.1"
-  }
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {},
+  "description": ""
 }
