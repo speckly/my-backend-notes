@@ -1,4 +1,4 @@
-const db = require("databaseConfig.js") //replace with your path
+const db = require("./databaseConfig") //replace with your path
 
 //remember to ctrl F and replace model name, exports, method names and query
 const myModel = {
@@ -8,7 +8,7 @@ const myModel = {
             if (err) {//database connection issue
                 return callback(err, null);
             } else {
-                getQuery = `SELECT * FROM myTable`
+                getQuery = `SELECT * FROM mytable`
                 dbConn.query(getQuery, (err, result) => {
                     dbConn.end()
                     if (err){
@@ -24,7 +24,7 @@ const myModel = {
             if (err) {//database connection issue
                 return callback(err, null);
             } else {
-                postQuery = `INSERT INTO myTable
+                postQuery = `INSERT INTO mytable
                 (f1, f2)
                 VALUES (?, ?)`
                 dbConn.query(postQuery, [data.myAttribute], (err, result) => {
@@ -43,7 +43,7 @@ const myModel = {
                 return callback(err, null);
             } else {
                 const putQuery = 
-                `UPDATE user
+                `UPDATE mytable
                 SET
                     f1 = ?,
                     f2 = ?
@@ -64,11 +64,8 @@ const myModel = {
                 return callback(err, null);
             } else {
                 const putQuery = 
-                `UPDATE user
-                SET
-                    f1 = ?,
-                    f2 = ?
-                WHERE id = ?`
+                `DELETE FROM mytable 
+                WHERE f1 = ?;`
                 dbConn.query(putQuery, [data.myAttribute], (err, result) => {
                     dbConn.end()
                     if (err){
