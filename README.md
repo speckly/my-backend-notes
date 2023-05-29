@@ -1,6 +1,6 @@
 # my-backend-notes
 
-##Note: paste batch file content into terminal for now, will look into how to get batch file to run multi statements in future
+## Note: paste batch file content into terminal for now, will look into how to get batch file to run multi statements in future
 
 sql 
 ```js
