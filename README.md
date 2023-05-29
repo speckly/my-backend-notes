@@ -1,5 +1,7 @@
 # my-backend-notes
 
+##Note: paste batch file content into terminal for now, will look into how to get batch file to run multi statements in future
+
 sql 
 ```js
 SELECT First_name FROM bed.my_table WHERE First_name = "Balls" ORDER BY First_name ASC||DESC;
