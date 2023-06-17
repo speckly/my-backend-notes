@@ -103,5 +103,8 @@ put is used to update a resource, put only allows full replacement of the resour
 404 Not Found
 500 Internal Server Error ISE
 
+
+#How it went...
+
 ![image](https://github.com/speckly/my-backend-notes/assets/60218942/254bab4b-0264-46ba-80db-92e7eed92a80)
 
